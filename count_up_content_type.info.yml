@@ -1,0 +1,10 @@
+name: Count-up Content Type
+description: This module creates a new Content Type (Count-up).
+package: Statistics
+
+type: module
+core_version_requirement: ^9.4 || ^10
+dependencies:
+  - drupal:count_up_paragraph
+libraries: -count_up_content_type/js
+  -count_up_content_type/css

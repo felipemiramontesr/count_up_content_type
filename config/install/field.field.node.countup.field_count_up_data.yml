@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_count_up_data
+    - node.type.countup
+    - paragraphs.paragraphs_type.count_up_data
+  module:
+    - entity_reference_revisions
+  enforced:
+    module:
+      - count_up_content_type
+id: node.countup.field_count_up_data
+field_name: field_count_up_data
+entity_type: node
+bundle: countup
+label: "Count-up data"
+description: ""
+required: true
+translatable: false
+default_value: {}
+default_value_callback: ""
+settings:
+  handler: "default:paragraph"
+  handler_settings:
+    target_bundles:
+      count_up_data: count_up_data
+    negate: 0
+    target_bundles_drag_drop:
+      count_up_data:
+        weight: 3
+        enabled: true
+      data:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions
